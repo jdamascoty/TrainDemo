@@ -17,7 +17,6 @@ public class Stop {
 	private String externalUrl;
 
 	protected Stop() {
-
 	}
 
 	public String getId() {

@@ -1,19 +1,29 @@
 package edu.drexel.TrainDemo.models;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "route")
 public class Route {
 
 	@Id
+	@Column(name = "id")
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
+
+	@Column(name = "name")
 	private String name;
+
+	@Column(name = "route_type")
 	private RouteType routeType;
+
+	@Column(name = "external_url")
 	private String externalUrl;
 
 	@ManyToOne

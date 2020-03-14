@@ -1,45 +1,48 @@
 package edu.drexel.TrainDemo.models;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "agency")
 public class Agency {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
-    private String name;
-    private String externalUrl;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
 
-    protected Agency() {
-    }
+	@Column(name = "name")
+	private String name;
 
-    public Agency(String name, String externalUrl) {
-        this.name = name;
-        this.externalUrl = externalUrl;
-    }
+	@Column(name = "external_url")
+	private String externalUrl;
 
-    public Long getId() {
-        return id;
-    }
+	protected Agency() {
+	}
 
-    public String getName() {
-        return name;
-    }
+	public Agency(String name, String externalUrl) {
+		this.name = name;
+		this.externalUrl = externalUrl;
+	}
 
-    public String getExternalUrl() {
-        return externalUrl;
-    }
+	public Long getId() {
+		return id;
+	}
 
-    @Override
-    public String toString() {
-        return "Agency{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", externalUrl='" + externalUrl + '\'' +
-                '}';
-    }
+	public String getName() {
+		return name;
+	}
+
+	public String getExternalUrl() {
+		return externalUrl;
+	}
+
+	@Override
+	public String toString() {
+		return "Agency{" + "id=" + id + ", name='" + name + '\'' + ", externalUrl='" + externalUrl + '\'' + '}';
+	}
 }

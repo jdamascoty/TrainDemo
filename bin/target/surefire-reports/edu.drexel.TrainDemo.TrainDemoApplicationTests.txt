@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: edu.drexel.TrainDemo.TrainDemoApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.041 s - in edu.drexel.TrainDemo.TrainDemoApplicationTests
